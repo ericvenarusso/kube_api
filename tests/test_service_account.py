@@ -72,7 +72,7 @@ class TestServiceAccount:
             ]
         ),
     )
-    def test_service_account_nonexistence(self, _):
+    def test_service_account_existence(self, _):
         service_account = ServiceAccount(name="test")
         assert service_account.exists() == True
 
@@ -86,6 +86,6 @@ class TestServiceAccount:
             ]
         ),
     )
-    def test_service_account_existence(self, _):
+    def test_service_account_nonexistence(self, _):
         service_account = ServiceAccount(name="test")
         assert service_account.exists() == False
